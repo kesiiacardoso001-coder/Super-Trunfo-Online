@@ -1,79 +1,47 @@
-import random
+print("=== SUPER TRUNFO SIMPLES ===")
 
-# 1. DEFINICAO DAS CARTAS
-cartas = {
-    "Dragao de Fogo": {
-        "Forca": 90,
-        "Defesa": 50,
-        "Velocidade": 70
-    },
-    "Guerreiro Ancestral": {
-        "Forca": 60,
-        "Defesa": 85,
-        "Velocidade": 55
-    },
-    "Mago Sombrio": {
-        "Forca": 40,
-        "Defesa": 60,
-        "Velocidade": 95
-    }
-}
+# Atributos do jogador
+forca_jogador = 90
+defesa_jogador = 50
+velocidade_jogador = 70
 
-# 2. INICIO DA PARTIDA
-def iniciar_duelo():
-    """Escolhe 1 carta para cada jogador."""
-    
-    lista_cartas = list(cartas.keys())
-    duas_cartas = random.sample(lista_cartas, 2)
-    
-    carta_jogador = duas_cartas[0]
-    carta_pc = duas_cartas[1]
-    
-    return carta_jogador, carta_pc
+# Atributos do PC
+forca_pc = 60
+defesa_pc = 85
+velocidade_pc = 55
 
-# 3. LOGICA DO DUELO
-def jogar_duelo():
-    print("--- BEM-VINDO AO DUELO RAPIDO SUPER TRUNFO! ---")
-    
-    carta_jogador, carta_pc = iniciar_duelo()
-    
-    print(f"\nSua carta e: {carta_jogador}")
-    
-    atributos = list(cartas[carta_jogador].keys())
-    print("\nAtributos da sua carta:")
-    for i, atributo in enumerate(atributos):
-        valor = cartas[carta_jogador][atributo]
-        print(f"({i+1}) {atributo}: {valor}")
+# Mostra a carta do jogador
+print("\nSua carta é: Dragão de Fogo")
+print("1 - Força:", forca_jogador)
+print("2 - Defesa:", defesa_jogador)
+print("3 - Velocidade:", velocidade_jogador)
 
-    # Pede a escolha
-    while True:
-        try:
-            escolha = int(input(f"\nEscolha o numero do atributo para comparar (1 a {len(atributos)}): ")) - 1
-            if 0 <= escolha < len(atributos):
-                atributo_escolhido = atributos[escolha]
-                break
-            else:
-                print("Escolha invalida. Tente novamente.")
-        except ValueError:
-            print("Entrada invalida. Digite um numero.")
+# Escolha do atributo
+escolha = int(input("\nEscolha o número do atributo: "))
 
-    # 4. COMPARACAO
-    valor_jogador = cartas[carta_jogador][atributo_escolhido]
-    valor_pc = cartas[carta_pc][atributo_escolhido]
-    
-    print("\n--- RESULTADO ---")
-    print(f"Voce escolheu {atributo_escolhido}.")
-    print(f"Sua carta ({carta_jogador}) tem {atributo_escolhido}: {valor_jogador}")
-    print(f"Carta do PC ({carta_pc}) tem {atributo_escolhido}: {valor_pc}")
-    
-    # 5. VERIFICA O VENCEDOR
-    if valor_jogador > valor_pc:
-        print("\nVITORIA! Sua carta é superior.")
-    elif valor_pc > valor_jogador:
-        print("\nDERROTA! A carta do PC era mais forte.")
-    else:
-        print("\nEMPATE! Os valores sãoo iguais.")
+if escolha == 1:
+    atributo = "Força"
+    valor_jogador = forca_jogador
+    valor_pc = forca_pc
+elif escolha == 2:
+    atributo = "Defesa"
+    valor_jogador = defesa_jogador
+    valor_pc = defesa_pc
+else:
+    atributo = "Velocidade"
+    valor_jogador = velocidade_jogador
+    valor_pc = velocidade_pc
 
-# Executa o jogo
-if __name__ == "__main__":
-    jogar_duelo()
+# Mostra resultado
+print("\n--- RESULTADO ---")
+print("Você escolheu:", atributo)
+print("Seu valor:", valor_jogador)
+print("PC:", valor_pc)
+
+if valor_jogador > valor_pc:
+    print("\nVocê VENCEU!")
+elif valor_jogador < valor_pc:
+    print("\nVocê PERDEU!")
+else:
+    print("\nEMPATE!")
+
