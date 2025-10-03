@@ -1,21 +1,36 @@
-# Super Trunfo: Duelo Rápido (Python)
+Super Trunfo: Duelo Rápido (Python)
 
-Este é um jogo de Super Trunfo extremamente simples feito em Python. O objetivo é comparar dois atributos de cartas em um duelo rápido de um round.
+Este é um jogo bem simples de Super Trunfo em Python.
+O jogador escolhe um atributo (Força, Defesa ou Velocidade) e compara com a carta do computador.
+Ganha quem tiver o valor mais alto nesse atributo.
+
 Projeto desenvolvido como parte da disciplina de Introdução à Programação de Computadores na Estácio.
 
-O código principal está no arquivo **`duelo.py`**.
+O código principal está no arquivo duelo.py.
 
+Como Jogar
 
+Execute o programa.
 
-## Rodar Online (Recomendado para Teste Rápido)
+Será exibida a sua carta (atributos fixos).
 
-Para testar o jogo imediatamente, sem instalar nada, você pode usar um interpretador Python online como o **GDB Online**.
+Escolha um atributo digitando 1 (Força), 2 (Defesa) ou 3 (Velocidade).
 
-1.  **Copie o Código:** Abra o arquivo `duelo.py` aqui no GitHub e copie todo o conteúdo do código.
-2.  **Acesse o GDB:** Vá para o [OnlineGDB Python Compiler](https://www.onlinegdb.com/).
-3.  **Cole o código na tela, no canto superior direito escolha a linguagem Phyton 3.**
-    * Cole o código no painel principal do editor (onde está `main.py`).
-    * Clique no botão verde **"Run"** (Executar).
-4.  **Jogue:** O jogo aparecerá no painel de **Console** (saída) e pedirá para você digitar sua escolha interativamente e irá exibir o resultado de cada partida.
+O jogo compara com os atributos da carta do computador e mostra se você venceu, perdeu ou empatou.
 
----
+Testar Online (Recomendado)
+
+Se não quiser instalar nada, você pode rodar online:
+
+Abra o arquivo duelo.py aqui no GitHub e copie o código.
+
+Acesse o OnlineGDB Python Compiler
+.
+
+Escolha a linguagem Python 3 no canto superior direito.
+
+Cole o código no editor principal (onde aparece main.py).
+
+Clique no botão verde "Run" (Executar).
+
+No console, siga as instruções e jogue.
