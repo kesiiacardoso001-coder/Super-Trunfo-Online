@@ -10,18 +10,9 @@ O código principal está no arquivo **`duelo.py`**.
 
 ---
 
-## Como Jogar
+## Testar Online 
 
-1. Execute o programa.  
-2. Será exibida a sua carta (atributos fixos).  
-3. Escolha um atributo digitando **1 (Força)**, **2 (Defesa)** ou **3 (Velocidade)**.  
-4. O jogo compara com os atributos da carta do computador e mostra se você venceu, perdeu ou empatou.  
-
----
-
-## Testar Online (Recomendado)
-
-Se não quiser instalar nada, você pode rodar online:
+Como é algo bastante simples, deixei apenas a opção de teste online:
 
 1. Abra o arquivo **`duelo.py`** aqui no GitHub e copie o código.  
 2. Acesse o [OnlineGDB Python Compiler](https://www.onlinegdb.com/).  
@@ -32,5 +23,4 @@ Se não quiser instalar nada, você pode rodar online:
 
 ---
 
-## Exemplo de Saída
 
